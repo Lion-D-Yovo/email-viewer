@@ -1,0 +1,13 @@
+<div class="form">
+<%= form_with Email.new do |f| %>
+  <div class="form-control">
+    <%= f.label :object %>
+    <%= f.text_field :object %>
+  </div>
+  <div class="form-control">
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </div>
+  <%= f.submit %>
+  <% end %>
+</div>

@@ -1,0 +1,25 @@
+<h1>All the emails</h1>
+
+<div>
+<ul>
+<% @emails.each do |e|  %>
+  <li> <%= e.object  %></li>
+<% end %>
+  </ul>
+</div>
+
+<h3>Create a new email</h3>
+
+<div class="form">
+<%= form_with model: Email.new do |f| %>
+  <div class="form-control">
+    <%= f.label :object %>
+    <%= f.text_field :object %>
+  </div>
+  <div class="form-control">
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </div>
+  <%= f.submit %>
+  <% end %>
+</div>
